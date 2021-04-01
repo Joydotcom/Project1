@@ -7,4 +7,4 @@ $('.foodPageBtn').on('click', function () {
  }) .then(function(data){
     console.log(data.data);
  })
-});
+ });
