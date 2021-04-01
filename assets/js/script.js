@@ -6,5 +6,3 @@ $('.foodPageBtn').on('click', function () {
     return response.json();
  }) .then(function(data){
     console.log(data.data);
- })
-});
