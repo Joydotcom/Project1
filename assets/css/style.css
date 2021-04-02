@@ -1,16 +1,20 @@
 header {
-  background-color: rgba(255, 255, 255, 0.356);
+  /* background-color: rgba(255, 255, 255, 0.356); */
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     font-style: italic;
     color: rgb(168, 168, 168);
     text-align: center;
-    border: bottom 15px  solid rgb(54, 54, 54);
-    text-decoration: double;
+    border-bottom: 10px  solid rgb(60, 107, 194);
+    height: 284px;
 }
 
 nav {
-background-color: rgba(255, 255, 255, 0.356);
+/* background-color: rgba(255, 255, 255, 0.356); */
+/* border-bottom: 10px  solid rgb(54, 54, 54); */
+border-bottom: 10px  solid rgb(60, 107, 194);
+padding-bottom: 30px;
+
 }
 
 p {
@@ -18,10 +22,14 @@ p {
     text-shadow: 3px 3px 3px rgb(54, 54, 54);
 }
 h1 {
-    color: rgba(60, 107, 194, 0.795) ;
-    font-size: 100px;
-    text-shadow: 3px 3px 3px rgb(54, 54, 54);
-   
+    /* color: rgb(60, 107, 194); */
+    color: white;
+    font-size: 115px;
+    /* text-shadow: 3px 3px 3px rgb(54, 54, 54);  */
+    text-shadow: 3px 3px 3px rgb(60, 107, 194); 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(158, 108, 85, 0.548);
 }
 
 h2 {
@@ -31,43 +39,64 @@ h2 {
 
 body {
     background-image:url("../images/topdown.jpeg");
-    background-size: 1500px 1100px;
+    background-size: cover;
 }
 
 .select-form {
    display: inline-block;
 }
 .random-1 {
-    color:rgba(60, 107, 194, 0.795);
-    background-color: rgba(216, 112, 52, 0.692) ;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 100px;
-        border: 3px solid rgb(88, 88, 88);
-
+    /* color:rgba(60, 107, 194, 0.795);
+    background-color: seashell; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-left: 22px;
+    /* border: 3px solid rgb(88, 88, 88); */
 }
-
+.toptrippin {
+    color: rgba(60, 107, 194, 0.795);
+    text-shadow: 2px 2px 2px rgb(54, 54, 54); 
+    font-size: 30px;
+}
 food-data {
     color: rgb(216, 112, 52);
 }
 
-activity-data {
 
-}
 .netflix {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: red;
     padding-left: 9px;
 }
 
-.background {
-    opacity: 0.50;
-}
 
 .zip-code {
-    
+padding-top: 100px;
+padding-bottom: 40px;
+}
+
+.form-select{
+    border: 5px solid rgb(88, 88, 88);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: seashell;
+    font-size: 20px;
+}
+
+.foodPageBtn {
+padding-right: 50px;
+}
+
+.navbar-brand {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+
+.page2btn {
+    padding-top: 100px;
+padding-bottom: 40px;
 }
