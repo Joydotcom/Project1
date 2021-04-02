@@ -8,3 +8,4 @@ $('.foodPageBtn').on('click', function () {
     console.log(data.data);
  })
  });
+
