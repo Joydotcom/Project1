@@ -1,15 +1,18 @@
 header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.356);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     font-style: italic;
-    color: white;
+    color: rgb(168, 168, 168);
     text-align: center;
-    border: 15px  solid rgb(54, 54, 54);
+    border: bottom 15px  solid rgb(54, 54, 54);
     text-decoration: double;
-
-
 }
+
+nav {
+background-color: rgba(255, 255, 255, 0.356);
+}
+
 p {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 3px 3px 3px rgb(54, 54, 54);
@@ -31,11 +34,21 @@ body {
     background-size: 1500px 1100px;
 }
 
+.select-form {
+   display: inline-block;
+}
 .random-1 {
     color:rgba(60, 107, 194, 0.795);
     background-color: rgba(216, 112, 52, 0.692) ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100px;
+        border: 3px solid rgb(88, 88, 88);
+
 }
 
 food-data {
@@ -53,4 +66,8 @@ activity-data {
 
 .background {
     opacity: 0.50;
+}
+
+.zip-code {
+    
 }
