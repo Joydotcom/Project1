@@ -14,21 +14,28 @@
 
   <body>
     <header>
-        <nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">
-      <img src="./assets/images/daytrippinlogo.JPEG" width="50" height="50" class="d-inline-block align-top" alt="">
-      <span class="toptrippin">Day Trippin'</span>
-    </a>
-  </nav>
-      <h1>Good Eatn'</h1> 
-      
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/images/daytrippinlogo.JPEG"
+            width="50"
+            height="50"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          <span class="toptrippin">Day Trippin'</span>
+        </a>
+      </nav>
+      <h1>Good Eatn'</h1>
     </header>
-   <div class="d-grid gap-2 col-2 mx-auto">
-        <span class="page3btn"><button class="btn btn-md btn-secondary" type="button" id="test">See Itinerary!</button>
-        </span>
-        </div>
+    <div class="d-grid gap-2 col-2 mx-auto">
+      <span class="page3btn"
+        ><button class="btn btn-md btn-secondary" type="button" id="test">
+          See Itinerary!
+        </button>
+      </span>
+    </div>
     <section class="display-food"></section>
-    <h2>Selected Food</h2>
     <!--Bootstrap Box-->
     <article class="food-data">Selected food will go here</article>
     <button class="results">Press to see your results</button>
@@ -38,7 +45,7 @@
   </body>
   <script>
     $().ready(function () {
-      $("#test").on("click", function () {
+      $("#finalResults").on("click", function () {
         window.location.href = "p3.html";
       });
     });
