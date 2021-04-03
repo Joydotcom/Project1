@@ -9,45 +9,51 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Activity Page</title>
+    <title>Document</title>
   </head>
   <body>
     <header>
-      <!-- Activity for the day!
-    <button id="test">Press here</button> -->
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light">
         <a class="navbar-brand" href="#">
           <img
             src="./assets/images/daytrippinlogo.JPEG"
-            width="30"
-            height="30"
+            width="50"
+            height="50"
             class="d-inline-block align-top"
             alt=""
           />
-          Day Trippin
+          <span class="toptrippin">Day Trippin'</span>
         </a>
       </nav>
-      <h1>Selected Activity</h1>
+      <h1>Activity</h1>
     </header>
-
+    <div class="d-grid gap-2 col-2 mx-auto">
+      <span class="page2btn"
+        ><button class="btn btn-md btn-secondary" type="button" id="test">
+          Click Here!
+        </button>
+      </span>
+    </div>
     <section class="display-activity"></section>
-
-    <div class="d-flex justify-content-center"></div>
+    <h2>Selected Activity</h2>
     <!--Bootstrap Box-->
-    <article class="activity-data d-flex justify-content-center">
-      Selected Activity will go here
-    </article>
+    <article class="activity-data">Selected Activity will go here</article>
 
-    <footer class="d-flex justify-content-center">
-      <button id="foodPageBtn">Find some food!</button>
-    </footer>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <span class="foodPageBtn"
+        ><button class="btn btn-secondary me-md-2" type="button">
+          Find some food!
+        </button>
+      </span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <script>
     $().ready(function () {
-      $("#foodPageBtn").on("click", function () {
+      $("#test").on("click", function () {
         window.location.href = "p2.html";
       });
     });
