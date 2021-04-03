@@ -27,9 +27,12 @@
 
     
   <div class="d-flex justify-content-center">
-      <form class="zip-code">
-<select id="optionState" class="form-select" aria-label="Default select example">
-        <option selected>Choose State Here!</option>
+
+    <form class="zip-code">
+       
+
+      <select id="optionState" class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
         <option value="AK">AK</option>
         <option value="AL">AL</option>
         <option value="AR">AR</option>
@@ -82,10 +85,12 @@
         <option value="WY">WY</option>
       </select>
     </form> 
+
     
  <div class="d-grid gap-2 col-2 mx-auto">
     <span class="random-1"><button class="btn btn-md btn-secondary" type="button" id="randomBtn">TAKE ME THERE!</button>
 </span>
+
   </section>
 
      
@@ -99,7 +104,14 @@
       $().ready(function(){
 
         $("#randomBtn").on("click", function(){
-          window.location.href="p2.html"
+  //         var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
+
+  // location.assign(queryString);
+  console.log("Your clicked the random button");
+  var userSelection = $("#optionState").val();
+  console.log("User Selection", userSelection);
+  var queryString = "./p1.html?state=" + userSelection;
+  location.assign(queryString);
         })
 
       })
