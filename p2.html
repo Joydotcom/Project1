@@ -8,18 +8,37 @@
   </head>
 
   <body>
-    Page 2
-    <button id="test">Press here</button>
+    <header>
+      <!-- Activity for the day!
+      <button id="test">Press here</button> -->
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/images/daytrippinlogo.JPEG"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          Day Trippin
+        </a>
+      </nav>
+      <h1>Place To Eat</h1>
+    </header>
+
     <section class="display-food"></section>
-    <h2>Selected Food</h2>
     <!--Bootstrap Box-->
     <article class="food-data">Selected food will go here</article>
-    <button class="results">Press to see your results</button>
+
+    <footer>
+      <button id="finalResults">Final Results</button>
+    </footer>
   </body>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
     $().ready(function () {
-      $("#test").on("click", function () {
+      $("#finalResults").on("click", function () {
         window.location.href = "p3.html";
       });
     });

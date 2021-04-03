@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Page 1
-    <button id="test">Press here</button>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Activity Page</title>
+  </head>
+  <body>
+    <header>
+      <!-- Activity for the day!
+    <button id="test">Press here</button> -->
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/images/daytrippinlogo.JPEG"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          Day Trippin
+        </a>
+      </nav>
+      <h1>Selected Activity</h1>
+    </header>
+
     <section class="display-activity"></section>
-  <h2>Selected Activity</h2>
-  <!--Bootstrap Box-->
-  <article class="activity-data">Selected Activity will go here</article>
-  <button class="foodPageBtn">Find some food!</button>
-  
-</body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="d-flex justify-content-center"></div>
+    <!--Bootstrap Box-->
+    <article class="activity-data d-flex justify-content-center">
+      Selected Activity will go here
+    </article>
 
-<script>
-$().ready(function(){
+    <footer class="d-flex justify-content-center">
+      <button id="foodPageBtn">Find some food!</button>
+    </footer>
+  </body>
 
-    $("#test").on("click", function(){
-        window.location.href="p2.html"
-    })
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-})
-</script>
+  <script>
+    $().ready(function () {
+      $("#foodPageBtn").on("click", function () {
+        window.location.href = "p2.html";
+      });
+    });
+  </script>
 </html>
