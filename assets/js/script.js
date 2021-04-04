@@ -20,23 +20,20 @@ $(".foodPageBtn").on("click", function () {
 //     var value = $(this).siblings('.description').val();
 //     var time = $(this).parent().attr('id');
 
-    // save in localStorage
-    // localStorage.setItem(time, value);
+// save in localStorage
+// localStorage.setItem(time, value);
 
-
-    // localStorage.setItem(“optionState”, "GA");
-
+// localStorage.setItem(“optionState”, "GA");
 
 var saveBtn = document.getElementById("saveBtn");
-var optionState = $
+var optionState = $;
 
 saveBtn.addEventListener("click", function (event) {
   console.log($("#optionState").val());
   localStorage.setItem("state", $("#optionState").val());
   event.preventDefault();
-  localStorage.setItem(“optionState”, "GA");
+  localStorage.setItem("optionState", "GA");
   // localStorage.setItem("optionState", JSON.stringify(optionState));
-
 });
 
 localStorage.getItem("state");
@@ -52,8 +49,6 @@ localStorage.getItem("state");
 
 //   })
 //   });
-
-
 
 //  This event listener on click for randomBtn
 $(".randomBtn").on("click", function () {

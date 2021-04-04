@@ -27,6 +27,7 @@
       </nav>
       <h1>Activity</h1>
     </header>
+<<<<<<< HEAD:p1.html
     <div class="d-grid gap-2 col-2 mx-auto">
       <!-- <span class="page2btn"
         ><button class="btn btn-md btn-secondary" type="button">
@@ -34,6 +35,9 @@
         </button>
       </span> -->
     </div>
+=======
+   
+>>>>>>> b75a28706619d27800c17b7572a10ebb772e61f1:activity.html
     <section class="display-activity"></section>
     <h2>Selected Activity</h2>
     <!--Bootstrap Box-->
@@ -45,13 +49,22 @@
         </button></span
       >
     </div>
+<span class="activitycard">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Activity</div>
+    <div class="card-body">
+      <h5 class="card-title">Light card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</span>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <span class="foodPageBtn"
         ><button id="test" class="btn btn-secondary me-md-2" type="button">
         ><button
           class="btn btn-secondary me-md-2"
           type="button"
-          id="activityBtn"
+          id="test"
         >
           Find some food!
         </button>
@@ -60,12 +73,12 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/js/activities.js"></script>
+    <script src="assets/js/food.js"></script>
   </body>
   <script>
     $().ready(function () {
       $("#test").on("click", function () {
-        window.location.href = "p2.html";
+        window.location.href = "food.html";
       });
     });
   </script>
