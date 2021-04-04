@@ -15,8 +15,11 @@ $(".foodPageBtn").on("click", function () {
 
 saveBtn.addEventListener("click", function (event) {
     console.log($("#optionState").val());;
+    localStorage.setItem("state", $("#optionState").val());
   event.preventDefault();
 });
+
+localStorage.getItem("state");
 
 //  This event listener on click for randomBtn (works for parks?parkCode=acad)
 //  $('.randomBtn').on('click', function () {
