@@ -14,8 +14,8 @@ $(".foodPageBtn").on("click", function () {
 });
 
 saveBtn.addEventListener("click", function (event) {
-    console.log($("#optionState").val());;
-    localStorage.setItem("state", $("#optionState").val());
+  console.log($("#optionState").val());
+  localStorage.setItem("state", $("#optionState").val());
   event.preventDefault();
 });
 
