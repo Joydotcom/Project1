@@ -13,10 +13,27 @@
 //     });
 // });
 
+// $(document).ready(function () {
+//   // listen for save button clicks
+//   $('.saveBtn').on('click', function () {
+//     // get nearby values
+//     var value = $(this).siblings('.description').val();
+//     var time = $(this).parent().attr('id');
+
+// save in localStorage
+// localStorage.setItem(time, value);
+
+// localStorage.setItem(“optionState”, "GA");
+
+var saveBtn = document.getElementById("saveBtn");
+var optionState = $;
+
 saveBtn.addEventListener("click", function (event) {
   console.log($("#optionState").val());
   localStorage.setItem("state", $("#optionState").val());
   event.preventDefault();
+  localStorage.setItem("optionState", "GA");
+  // localStorage.setItem("optionState", JSON.stringify(optionState));
 });
 
 // localStorage.getItem("state");
