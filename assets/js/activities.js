@@ -41,7 +41,7 @@ var activities = [
 
 function random() {
   var randomChoice = Math.floor(Math.random() * activities.length);
-  // console.log(randomChoice);
+  console.log(randomChoice);
   console.log(activities[randomChoice]);
 }
 var queryParameter = activities[randomChoice];
