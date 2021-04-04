@@ -13,9 +13,29 @@ $(".foodPageBtn").on("click", function () {
     });
 });
 
+// $(document).ready(function () {
+//   // listen for save button clicks
+//   $('.saveBtn').on('click', function () {
+//     // get nearby values
+//     var value = $(this).siblings('.description').val();
+//     var time = $(this).parent().attr('id');
+
+    // save in localStorage
+    // localStorage.setItem(time, value);
+
+
+    // localStorage.setItem(“optionState”, "GA");
+
+
+var saveBtn = document.getElementById("saveBtn");
+var optionState = $
+
 saveBtn.addEventListener("click", function (event) {
-    console.log($("#optionState").val());;
+  console.log($("#optionState").val());
   event.preventDefault();
+  localStorage.setItem(“optionState”, "GA");
+  // localStorage.setItem("optionState", JSON.stringify(optionState));
+
 });
 
 //  This event listener on click for randomBtn (works for parks?parkCode=acad)
@@ -29,6 +49,8 @@ saveBtn.addEventListener("click", function (event) {
 
 //   })
 //   });
+
+
 
 //  This event listener on click for randomBtn
 $(".randomBtn").on("click", function () {
