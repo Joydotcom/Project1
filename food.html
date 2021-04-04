@@ -9,8 +9,9 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>Find Food Here</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-light">
@@ -25,46 +26,27 @@
           <span class="toptrippin">Day Trippin'</span>
         </a>
       </nav>
-      <h1>Activity</h1>
+      <h1>Hungry?</h1>
     </header>
     <div class="d-grid gap-2 col-2 mx-auto">
-      <span class="page2btn"
+      <span class="page3btn"
         ><button class="btn btn-md btn-secondary" type="button" id="test">
-          Click Here!
+          See Itinerary!
         </button>
       </span>
     </div>
-    <section class="display-activity"></section>
-    <h2>Selected Activity</h2>
+    <section class="display-food"></section>
     <!--Bootstrap Box-->
-    <article class="activity-data">Selected Activity will go here</article>
-    <div class="d-grid gap-2 col-2 mx-auto">
-      <span
-        ><button class="btn btn-md btn-secondary" type="button" id="activityBtn">
-          save activity button
-        </button></span
-      >
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <span class="foodPageBtn"
-        ><button
-          class="btn btn-secondary me-md-2"
-          type="button"
-          id="activityBtn"
-        >
-          Find some food!
-        </button>
-      </span>
-    </div>
-
+    <article class="food-data">Selected food will go here</article>
+    <button class="results">Press to see your results</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/js/activities.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
   <script>
     $().ready(function () {
       $("#test").on("click", function () {
-        window.location.href = "p2.html";
+        window.location.href = "itinerarypage.html";
       });
     });
   </script>
