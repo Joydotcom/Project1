@@ -32,11 +32,14 @@ var optionState = $
 
 saveBtn.addEventListener("click", function (event) {
   console.log($("#optionState").val());
+  localStorage.setItem("state", $("#optionState").val());
   event.preventDefault();
   localStorage.setItem(“optionState”, "GA");
   // localStorage.setItem("optionState", JSON.stringify(optionState));
 
 });
+
+localStorage.getItem("state");
 
 //  This event listener on click for randomBtn (works for parks?parkCode=acad)
 //  $('.randomBtn').on('click', function () {
