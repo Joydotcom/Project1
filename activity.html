@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-light">
@@ -26,27 +25,49 @@
           <span class="toptrippin">Day Trippin'</span>
         </a>
       </nav>
-      <h1>Good Eatn'</h1>
+      <h1>Activity</h1>
     </header>
+   
+    <section class="display-activity"></section>
+    <h2>Selected Activity</h2>
+    <!--Bootstrap Box-->
+    <article class="activity-data">Selected Activity will go here</article>
     <div class="d-grid gap-2 col-2 mx-auto">
-      <span class="page3btn"
-        ><button class="btn btn-md btn-secondary" type="button" id="test">
-          See Itinerary!
+      <span
+        ><button class="btn btn-md btn-secondary" type="button" id="activityBtn">
+          save activity button
+        </button></span
+      >
+    </div>
+<span class="activitycard">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Activity</div>
+    <div class="card-body">
+      <h5 class="card-title">Light card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</span>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <span class="foodPageBtn"
+        ><button
+          class="btn btn-secondary me-md-2"
+          type="button"
+          id="test"
+        >
+          Find some food!
         </button>
       </span>
     </div>
-    <section class="display-food"></section>
-    <!--Bootstrap Box-->
-    <article class="food-data">Selected food will go here</article>
-    <button class="results">Press to see your results</button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/food.js"></script>
   </body>
   <script>
     $().ready(function () {
-      $("#finalResults").on("click", function () {
-        window.location.href = "p3.html";
+      $("#test").on("click", function () {
+        window.location.href = "food.html";
       });
     });
   </script>

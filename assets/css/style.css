@@ -100,3 +100,23 @@ padding-right: 50px;
     padding-top: 100px;
 padding-bottom: 40px;
 }
+
+.page3btn {
+    padding-top: 100px;
+    padding-bottom: 40px;   
+}
+
+.row {
+    padding-top: 100px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 60px;
+}
+
+.card {
+    padding-bottom: 20px;
+}
+
+.activitycard {
+    margin: 0 auto;
+}
