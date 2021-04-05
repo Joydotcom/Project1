@@ -16,15 +16,18 @@ function getRandomActivity() {
   return activities[randomNumber];
 }
 
-var randomActivity = getRandomActivity();
-displayActivityData(randomActivity);
-var optionState = localStorage.getItem(optionState);
 
-function displayActivityData(activity) {
-  console.log(activity);
+displayActivityData();
+
+
+function displayActivityData() {
+  // console.log(activity);
+  var randomActivity = getRandomActivity();
+  var optionState = localStorage.getItem("state");
+  console.log(optionState);
   // fetch and display data
   // get State, build url with state and activity
-  fetch("https://developer.nps.gov/api/v1/activities/parks?id="+optionState+"&q="+activity+"&limit=5&start=0&api_key=7Ir4CEYWv3mXsoB7yi5AYKGSBLXqPI5lOBOUvet2"
+  fetch("https://developer.nps.gov/api/v1/activities/parks?id="+optionState+"&q="+randomActivity+"&stateCode="+optionState+"&limit=5&start=0&api_key=7Ir4CEYWv3mXsoB7yi5AYKGSBLXqPI5lOBOUvet2"
   )
     .then((response) => {
       return response.json();
@@ -33,7 +36,7 @@ function displayActivityData(activity) {
       console.log(data.data[0]);
       for (var i = 0; i < data.data[0].parks.length; i++) {
         //console.log(data.data[0].parks[i].states);
-        if ($("#optionState").val() === data.data[0].parks[i].states) {
+        if (optionState === data.data[0].parks[i].states) {
           console.log(
             "This is a match for " + data.data[0].parks[i].states + "state"
           );

@@ -29,10 +29,11 @@ var saveBtn = document.getElementById("saveBtn");
 var optionState = $;
 
 saveBtn.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log($("#optionState").val());
   localStorage.setItem("state", $("#optionState").val());
-  event.preventDefault();
-  localStorage.setItem("optionState", "GA");
+  
+  // localStorage.setItem("optionState", "");
   // localStorage.setItem("optionState", JSON.stringify(optionState));
 });
 
