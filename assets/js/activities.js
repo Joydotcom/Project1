@@ -16,33 +16,48 @@ function getRandomActivity() {
   return activities[randomNumber];
 }
 
+var randomActivity = getRandomActivity();
+displayActivityData(randomActivity);
+var optionState = localStorage.getItem(optionState);
 
-displayActivityData();
-
-
-function displayActivityData() {
-  // console.log(activity);
-  var randomActivity = getRandomActivity();
-  var optionState = localStorage.getItem("state");
-  console.log(optionState);
+function displayActivityData(activity) {
+  console.log(activity);
   // fetch and display data
   // get State, build url with state and activity
-  fetch("https://developer.nps.gov/api/v1/activities/parks?id="+optionState+"&q="+randomActivity+"&stateCode="+optionState+"&limit=5&start=0&api_key=7Ir4CEYWv3mXsoB7yi5AYKGSBLXqPI5lOBOUvet2"
+  fetch(
+    "https://developer.nps.gov/api/v1/activities/parks?id=" +
+      optionState +
+      "&q=" +
+      activity +
+      "&limit=5&start=0&api_key=7Ir4CEYWv3mXsoB7yi5AYKGSBLXqPI5lOBOUvet2"
   )
     .then((response) => {
       return response.json();
     })
     .then(function (data) {
+      var selectedState = localStorage.getItem("state");
+
+      var selectedStateArray = data.data[0].parks.filter(
+        (item) => item.states === selectedState
+      );
+      var randomPark =
+        selectedStateArray[
+          Math.floor(Math.random() * selectedStateArray.length)
+        ];
+      var cardTemplate = `
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Your Park...</div>
+    <div class="card-body">
+      <h5 class="card-title">${randomPark.name}</h5>
+      <p class="card-text">Enjoy your day at this park!</p>
+    </div>
+  </div>
+`;
+      document.querySelector(".activitycard").innerHTML += cardTemplate;
       console.log(data.data[0]);
       for (var i = 0; i < data.data[0].parks.length; i++) {
         //console.log(data.data[0].parks[i].states);
-        if (optionState === data.data[0].parks[i].states) {
-          console.log(
-            "This is a match for " + data.data[0].parks[i].states + "state"
-          );
-          console.log(
-            "This is the park that matches it " + data.data[0].parks[i].fullName
-          );
+        if ($("#optionState").val() === data.data[0].parks[i].states) {
         }
       }
     });
@@ -69,8 +84,7 @@ function displayActivityData() {
 
 // localStorage.getItem("state");
 
-
-// NEW CODE 
+// NEW CODE
 
 // var activities = [
 //   "camping",
@@ -123,7 +137,6 @@ function displayActivityData() {
 //     });
 // }
 
-
 // NEW CODE FROM ASK BCS
 //Yep! We want to build up our url string.
 //Here's how I'm gonna start this off:
@@ -150,21 +163,16 @@ function displayActivityData() {
 //     })
 //     .then(function (data) {
 
-  
-  
 // EXAMPLES OF STRING CONCAT
-  
+
 // var str1 = "bat"
 // var str2 = "man"
 
 // console.log("My name is " +  str1 + str2) //prints "My name is batman"
 // console.log("I have one " + str1) //prints "I have one bat"
-  
 
-  
 // This way will work no problem. I recommend trying this one out first and making it work!
 // The second way is to use something called a template literal. This uses backticks and these symbols ${varname} to quickly concatenate strings:
-
 
 // var str1 = "bat"
 // var str2 = "man"
